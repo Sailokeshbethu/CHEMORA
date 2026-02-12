@@ -1,0 +1,1052 @@
+/* ================= PRELOADER ================= */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.logo-drop {
+    width: 180px;
+    opacity: 0;
+    animation: drop 2.2s ease-out forwards;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-300px) scale(0.9);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(20px) scale(1.05);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-10px) scale(0.98);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/*=====body part=====*/
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.tophead {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.social {
+    margin: 0px;
+    padding: 20px 0px;
+}
+
+ul.social li {
+    display: inline;
+    padding: 0px 5px;
+}
+
+ul.social li a {
+    color: #5d5959;
+}
+
+li.small a {
+    font-size: 120%;
+}
+
+li.big a {
+    font-size: 160%;
+}
+
+ul.social li a {
+    text-decoration: none;
+}
+
+ul.social li a:hover {
+    padding: 0px !important;
+    margin: 0px auto;
+    color: #00a7ce;
+}
+
+@media screen and (max-width:1000px) {
+    .social {
+        display: none;
+    }
+}
+
+ul.menu li {
+    display: inline;
+    padding: 0px 0px;
+    margin: 0px auto;
+}
+
+.right-menu {
+    padding: 0px;
+    background-color: white;
+    border: none;
+}
+
+.text {
+    text-align: justify;
+}
+
+.top-spa {
+    margin-top: 10px;
+}
+
+.con-slider {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.cont-email {
+    margin-top: 15px;
+}
+
+.engn {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tops {
+    margin-top: 15px;
+}
+
+.topss {
+    margin-top: 15px;
+    font-size: 120%;
+    color: grey;
+}
+
+.topss:hover {
+    color: #00a7ce;
+}
+
+.imk-wd img {
+    max-width: 100%;
+}
+
+/*nav part*/
+
+
+/*
+.affix {
+      top: 0;
+      width: 100%;
+      z-index: 15 !important;
+  }
+ 
+  
+  .nav-la{
+  margin-bottom:-5px;
+  }
+  .dropdown-menu {
+  background-color: #969696;
+  }
+  
+  
+  .navbar {
+      margin-bottom: 0px;
+	  border-radius: none!important;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 150px;
+	 
+  }
+.navbar-inverse {
+    background-color: #00a7ce;
+	    border:none;
+    margin: 0;
+	padding: 0;
+	
+}
+
+.navbar-nav > li > a:hover {
+    color: #000!important;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    
+    background-color: transparent;
+	color: #000;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000!important;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+    */
+
+
+
+    
+/*navpart-end*/
+
+/* ================= NAVBAR (REFERENCE STYLE) ================= */
+
+/* Affix support */
+.affix {
+    position: static;
+    top: 15px;
+    width: 100%;
+    z-index: 1000 !important;
+}
+
+/* Navbar base */
+.navbar-inverse {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center navbar content */
+.navbar > .container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Rounded pill container */
+#myNavbar {
+    background: linear-gradient(90deg, #8be3c7, #6bb7ff);
+    border-radius: 40px;
+    padding: 12px 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Nav alignment */
+.nav-la {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Nav links */
+.navbar-inverse .navbar-nav > li > a {
+    color: #083344;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 14px;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Hover animation */
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #064e3b !important;
+    transform: translateY(-3px);
+    background: transparent;
+}
+
+/* Dropdown caret color */
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #083344;
+    border-bottom-color: #083344;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background: #cfeee6;
+    border-radius: 22px;
+    padding: 26px 30px;
+    min-width: 320px;
+    border: none;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    top: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    display: block;
+    /* visibility: hidden; */
+}
+
+/* Hover bridge (prevents flicker) */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 20px;
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1;
+    transform: translateY(0);
+    /* visibility: visible; */
+}
+
+/* Dropdown links */
+.dropdown-menu > li > a {
+    color: #083344;
+    font-weight: 500;
+    padding: 8px 10px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: rgba(231, 238, 239, 0.721);
+    color: whitesmoke;
+}
+
+
+/* ================= LOGIN RIGHT ================= */
+
+.navbar-right > li > a {
+    color: #083344 !important;
+    font-weight: 600;
+}
+
+.navbar-right > li > a:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= TOGGLE (MOBILE) ================= */
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #083344;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background: transparent;
+}
+
+
+
+/*slider-start*/
+/*
+.slider-top {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.margin-top {
+    margin-top: 35px;
+}
+*/
+
+/* ================= SLIDER SPACING FIX ================= */
+
+#first-slider {
+    max-width: 1500px;      /* same feel as container */
+    margin: 50px;      /* space around + center */
+    padding: 0 20px;        /* side gap on small screens */
+}
+
+/* Ensure carousel doesn’t overflow */
+#first-slider .carousel {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+/*slider-end*/
+
+
+/* service*/
+.service {
+    background-image: url(../images/expertise2.png);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 0;
+    overflow: hidden;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.service-content {
+    text-align: center;
+    margin: 0 auto 75px;
+}
+
+.service-content p {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.service-content h2 {
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.service-content h2::before {
+    border-bottom: 1px solid #fff;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    width: 100px;
+}
+
+.service-content h2::after {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    bottom: -6px;
+    content: "";
+    height: 11px;
+    left: 50%;
+    margin-left: -5.5px;
+    position: absolute;
+    width: 11px;
+}
+
+
+
+.pull-left {
+    margin-right: 50px;
+}
+
+.media {
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+
+.media-body {
+    margin-top: 20px;
+}
+
+.media-body h3 {
+    color: #0ca9f2;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.media-body p {
+    color: #fff;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.icon {
+    font-size: 45px;
+    color: #fff;
+}
+
+/* proto */
+
+
+.proto {
+
+
+    padding: 40px 0;
+
+}
+
+.prol {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 30px;
+
+}
+
+.prol h2 {
+
+    color: #0ca9f2;
+    text-align: center;
+
+}
+
+.prol h2::before {
+    border-bottom: 1px solid #0ca9f2;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    width: 100px;
+}
+
+.prol h2::after {
+    background: #0ca9f2;
+    border: 1px solid #0ca9f2;
+    border-radius: 25px;
+    bottom: -6px;
+    content: "";
+    height: 11px;
+    left: 50%;
+    margin-left: -5.5px;
+    position: absolute;
+    width: 11px;
+}
+
+
+
+
+
+.proto-img {
+    padding: 0px 0px;
+    text-align: center;
+    margin: 0px auto;
+
+
+}
+
+.port-top {
+    margin: 0px;
+    padding: 0px;
+}
+
+.proto-img h3 {
+    color: #0ca9f2;
+
+}
+
+/* footer */
+
+
+.footer {
+
+    padding: 30px 0;
+
+}
+
+/* footer */
+
+
+ul.address {
+    margin-top: 0px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    background-image: url(../images/foot.png);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    overflow: hidden;
+    color: #fff;
+
+}
+
+.footer h3 {
+    margin-bottom: 20px;
+    color: #0ca9f2;
+    margin-top: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.buu {
+    width: 20%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #0ca9f2;
+    border: none;
+}
+
+.buu:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+.foot {
+    background-color: #000000;
+    text-align: center;
+    padding: 4px;
+    color: #ccc;
+}
+
+.foot p {
+    margin-top: 8px;
+}
+
+.foot1 {
+    background-color: #0ca9f2;
+    text-align: center;
+    padding: 4px;
+    color: #ccc;
+}
+
+.foot1 p {
+    margin-top: 8px;
+}
+
+
+.formla {
+    background-color: transparent;
+    color: #fff;
+
+}
+
+#quote-carousel {
+    padding: 0;
+    margin-top: 0;
+}
+
+
+
+
+
+.social-img ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-img ul li {
+    display: inline;
+    padding: 5px;
+    margin: 0;
+    font-size: 36px;
+
+}
+
+.foot {
+    background-color: #000;
+    text-align: center;
+}
+
+
+
+
+/*sensors css*/
+
+ul.home {
+    margin-top: 0px;
+    padding-left: 20px;
+    margin: 0;
+
+}
+
+
+.sensors {
+    padding: 30px 0;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.sensors h3 {
+    margin-bottom: 25px;
+
+}
+
+
+.controller {
+
+    padding: 30px;
+    color: #000;
+    margin: 30px;
+    border: 1px solid #0ca9f2;
+}
+
+
+.controller:hover {
+    background-color: #0ca9f2;
+    color: #fff;
+}
+
+.sideimg {
+    background-size: cover;
+    max-width: 100%;
+
+}
+
+
+.motor {
+    box-shadow: 5px 5px 5px #b8bac0;
+    padding: 20px;
+    text-align: justify;
+    color: #000;
+    overflow: hidden;
+    margin-top: 40px;
+
+}
+
+.motor:hover {
+
+    color: #fff;
+    background-color: #0ca9f2;
+}
+
+/* ================= OUR PROFILE SPACING ================= */
+
+/* Space below heading section */
+.profo {
+    margin-bottom: 30px;
+}
+
+/* Space below scrolling logos */
+.profile-scroll-container {
+    margin-bottom: 60px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+
+/* ================= PROFILE HORIZONTAL SCROLL ================= */
+
+.profile-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+/* Moving track */
+.profile-scroll-track {
+    display: flex;
+    width: max-content;
+    animation: profile-scroll 20s linear infinite;
+    align-items: center;
+}
+
+/* Pause on hover */
+.profile-scroll-container:hover .profile-scroll-track {
+    animation-play-state: paused;
+}
+
+/* Each logo */
+.profile-logo {
+    width: 220px;
+    padding: 0 25px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-logo img {
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-logo img:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* Animation */
+@keyframes profile-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.dropdown-menu {
+    background-color: #00a7ce;
+}
+
+
+
+
+
+.aboutl {
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+
+.aboutl-content {
+    text-align: justify;
+
+}
+
+.aboutl-content h2 {
+
+    text-align: center;
+    color: #00a7ce;
+
+}
+
+
+
+.carousel-inner-carou {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.item-about {
+    border: 2px solid #000;
+
+}
+
+
+.item-about img {
+    width: 100%;
+    padding: 50px;
+}
+
+
+.aboutl-top {
+    position: absolute;
+    top: 34px;
+    right: 91px;
+
+}
+
+
+.aboutl-content:hover strong {
+    width: 500px;
+}
+
+
+
+.carousel-indicators {
+
+    z-index: 1;
+}
+
+
+.iconl {
+    font-size: 45px;
+}
+
+
+/* REMOVE BACKGROUND IMAGE BEHIND MARQUEE */
+.backcon,
+.con-back {
+    background: none !important;
+}
+/* ================= MARQUEE TEXT SIZE ================= */
+
+.mar-box {
+    font-size: 20px;        /* increase text size */
+    line-height: 1.8;       /* better readability */
+    font-weight: 500;       /* slightly bold */
+    color: #083344;         /* clean readable color */
+}
+/*=====mobile adjustment=====*/
+@media (max-width: 768px) {
+    .mar-box {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+/*=====mobile adjustment-end=====*/
+
+/* ================= NAVBAR LOGO + MENU (CSS ONLY FIX) ================= */
+
+/* Make navbar container a flex row */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+/* Logo styling */
+.nav-logo {
+    flex-shrink: 0; /* logo should not shrink */
+}
+
+.nav-logo img {
+    height: 60px;   /* adjust if needed */
+    width: auto;
+    display: block;
+}
+
+/* Let navbar menu take remaining space */
+#myNavbar {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    #myNavbar {
+        width: 100%;
+    }
+}
+
+/* ================= HERO IMAGE SPACING ================= */
+
+.hero-image-wrapper {
+    max-width: 1500px;          /* controls overall width */
+    /* margin: 40px auto 60px;     top | sides | bottom space */
+    margin: 50px; /* space around + center */
+    padding: 0 20px;            /* side spacing on small screens */
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    border-radius: 28px;        /* rounded corners like reference */
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+    .hero-image-wrapper {
+        margin: 20px 10px 40px;
+        padding: 0;
+    }
+
+    .hero-image-wrapper img {
+        border-radius: 18px;
+    }
+}
+/* ================= MOBILE NAVBAR STRUCTURE FIX ================= */
+@media (max-width: 768px) {
+
+    .navbar .container {
+        display: block !important;
+    }
+
+    .navbar-header {
+        text-align: center;
+        float: none;
+    }
+
+    .navbar-toggle {
+        float: none;
+        margin: 10px auto;
+        display: inline-block;
+    }
+
+    .nav-la {
+        display: block !important;
+    }
+
+    .nav-la > li {
+        float: none;
+    }
+
+    /* Bootstrap collapse fix */
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+}
+
+/* ================= DROPDOWN – FINAL WORKING FIX ================= */
+
+/* DEFAULT (Bootstrap controlled) */
+.dropdown-menu {
+    display: none;
+}
+
+/* DESKTOP: hover dropdown */
+@media (min-width: 769px) {
+
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .dropdown:hover > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE: click dropdown (Bootstrap adds .open) */
+@media (max-width: 768px) {
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background: #e8f6f2;
+        padding: 10px 0;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+}
+
+
+/*===water treatment===*/
+.industries h2 {
+  color: #0ca9f2;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.industries h3 {
+  margin-top: 30px;
+  color: #083344;
+}
+
+.industries h4 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.industries ul {
+  padding-left: 20px;
+}
+
+.industries ul li {
+  margin-bottom: 8px;
+}

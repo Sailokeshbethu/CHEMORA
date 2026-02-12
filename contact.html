@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Chemora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar hidden">
+        <div class="nav-container">
+
+            <div class="logo">
+                <a href="index.html">Chemora</a>
+            </div>
+
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="#">About Us</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">Services</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">Equipment & Systems</a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="contact-section">
+        <h1>Contact Chemora</h1>
+        <p>We'd love to hear from you! Please fill out the form below:</p>
+
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="reachus">Reach us for</label>
+            <select id="reachus" name="reachus" required>
+                <option value="">-- Select an option --</option>
+                <option value="chemical-enquiries">Chemical enquiries</option>
+                <option value="equipment-selection">Equipment selection</option>
+                <option value="site-audits">Site audits</option>
+                <option value="technical-consultation">Technical consultation</option>
+            </select>
+
+            <button type="submit" class="cta-btn">Request a Commercial Quote</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
