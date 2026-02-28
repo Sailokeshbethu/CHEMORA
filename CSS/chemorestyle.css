@@ -9,6 +9,17 @@
     z-index: 9999;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    margin: 20px 0;           /* small space top & bottom */
+}
+
+.video-container video {
+    width: 600px;
+    border-radius: 20px;       /* curved edges */
+}
+
 .logo-drop {
     width: 180px;
     opacity: 0;
