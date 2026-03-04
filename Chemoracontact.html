@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Chemora</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chemora</title>
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/chemorestyle.css" rel="stylesheet">
-	<link href="css/slider.css" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+    <!-- Bootstrap -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/chemorestyle.css" rel="stylesheet">
+    <link href="CSS/slider.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
 
 </head>
 
@@ -228,15 +228,15 @@ $(document).ready(function () {
 
 <script>
     (function () {
-        emailjs.init("Dr2LWolra4XNGpPSN"); // Replace with your Public Key
+        emailjs.init("bCJRGoPl17Ed0BRb0"); // Replace with your Public Key
     })();
 
     document.getElementById("contact-form")
         .addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("service_6xx2toq",   // Replace with Service ID
-                "template_7y1vgqt",              // Replace with Template ID
+            emailjs.sendForm("service_c9tjqsn",   // Replace with Service ID
+                "template_9u608wr",              // Replace with Template ID
                 this)
                 .then(function () {
                     alert("Message Sent Successfully!");
