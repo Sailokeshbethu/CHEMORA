@@ -228,15 +228,15 @@ $(document).ready(function () {
 
 <script>
     (function () {
-        emailjs.init("bCJRGoPl17Ed0BRb0"); // Replace with your Public Key
+        emailjs.init("EVCewsbzhm6lg2UhZ"); // Replace with your Public Key
     })();
 
     document.getElementById("contact-form")
         .addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("service_c9tjqsn",   // Replace with Service ID
-                "template_9u608wr",              // Replace with Template ID
+            emailjs.sendForm("service_5v97bla",   // Replace with Service ID
+                "template_7y1vgqt",              // Replace with Template ID
                 this)
                 .then(function () {
                     alert("Message Sent Successfully!");
